@@ -15,11 +15,11 @@ import java.util.concurrent.CountDownLatch;
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 
 public class DistributedSequence {
-    private String ip = "35.223.9.119";
-    private String port = "2181";
+    private String ip = "YOUR IP";
+    private String port = "YOUR PORT";
     private static ZooKeeper zookeeper;
 
-    private String path = "/stan";  //Latch is used to make the main thread wait until the zookeeper client connects with the ensemble.
+    private String path = "/YOUR PATH";  //Latch is used to make the main thread wait until the zookeeper client connects with the ensemble.
     private CountDownLatch latch = new CountDownLatch(0);
     private static final Logger logger = LoggerFactory.getLogger(DistributedSequence.class);
 
